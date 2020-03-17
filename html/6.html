@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/6.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../../Iconfont/iconfont.css">
+    <script src="../../Echarts/echarts.js"></script>
+    <script src="../js/6.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <i class="iconfont icon-caidan"></i>
+        实时显示
+    </header>
+    <section>
+        <ul id='charts'>
+            <li><div class="main6 item"></div></li>
+            <li><div class="main1 item"></div></li>
+            <li><div class="main2 item"></div></li>
+            <li><div class="main3 item"></div></li>
+            <li><div class="main4 item"></div></li>
+            <li><div class="main5 item"></div></li>
+            <li><div class="main6 item"></div></li>
+            <li><div class="main1 item"></div></li>
+        </ul>
+        <ol>
+            <li class="bg"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </section>
+    <script>
+    let main1,main2,main3,main4,main5,main6;
+    main1 = document.querySelectorAll('.main1')
+    main2 = document.querySelector('.main2')    
+    main3 = document.querySelector('.main3')    
+    main4 = document.querySelector('.main4')    
+    main5 = document.querySelector('.main5')    
+    main6 = document.querySelectorAll('.main6')
+    
+    let myCharts0 = echarts.init(main1[0]);
+    let myCharts1 = echarts.init(main1[1]);
+    let myCharts2 = echarts.init(main2);
+    let myCharts3 = echarts.init(main3);
+    let myCharts4 = echarts.init(main4);
+    let myCharts5 = echarts.init(main5);
+    let myCharts6 = echarts.init(main6[0]);
+    let myCharts7 = echarts.init(main6[1]);
+
+
+    var option1 = {
+
+        title:{
+            text:'温度',
+            left:'center',
+            textStyle:{
+                fontSize:35
+            }
+        },
+        grid:{
+            left:'5%',
+            top:'10%',
+            right:'5%',
+            bottom:'3%',
+            containLabel: true
+        },
+        xAxis :{
+            name:'时间',
+            boundaryGap: false,
+            data:['0','1','2','3',4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+         
+            axisLabel:{
+                rotate:-90,
+               
+            }
+      
+        },
+        yAxis:{
+            type:'value',
+            axisLabel:{
+                formatter:'{value}°c'
+            }
+           
+        },
+      
+        series:{
+            type:'line',
+            symbolSize:15,
+            symbol:'circle',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+            data:[19,19,18,18,18,18,17,16,17,19,21,21,23,23,24,24,25,25,25,15],
+            lineStyle:{
+                color:"#999999",
+                width:4
+            },
+            itemStyle:{
+                borderColor:'#999999',
+                color:'#999999'
+            },
+            
+        } 
+    }
+    var option2 = {
+
+title:{
+    text:'空气湿度',
+    left:'center',
+    textStyle:{
+        fontSize:35
+    }
+},
+grid:{
+    left:'5%',
+    top:'10%',
+    right:'5%',
+    bottom:'3%',
+    containLabel: true
+},
+xAxis :{
+    name:'时间',
+    boundaryGap: false,
+    data:['0','1','2','3',4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+    
+    axisLabel:{
+        rotate:-90,
+       
+    }
+
+},
+yAxis:{
+    type:'value',
+    axisLabel:{
+        formatter:'{value}°c'
+    }
+   
+},
+
+series:{
+    type:'line',
+    symbolSize:15,
+    symbol:'circle',
+    label: {
+        normal: {
+            show: true,
+            position: 'top'
+        }
+    },
+    data:[19,19,18,18,18,18,17,16,17,19,21,21,23,23,24,24,25,25,25],
+    lineStyle:{
+        color:"#999999",
+        width:4
+    },
+    itemStyle:{
+        borderColor:'#999999',
+        color:'#999999'
+    },
+    
+} 
+}
+    var option3 = {
+
+title:{
+    text:'PM2.5',
+    left:'center',
+    textStyle:{
+        fontSize:35
+    }
+},
+grid:{
+    left:'5%',
+    top:'10%',
+    right:'5%',
+    bottom:'3%',
+    containLabel: true
+},
+xAxis :{
+    name:'时间',
+    boundaryGap: false,
+    data:['0','1','2','3',4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+   
+    axisLabel:{
+        rotate:-90,
+       
+    }
+
+},
+yAxis:{
+    type:'value',
+    axisLabel:{
+        formatter:'{value}°c'
+    }
+   
+},
+
+series:{
+    type:'line',
+    symbolSize:15,
+    symbol:'circle',
+    label: {
+        normal: {
+            show: true,
+            position: 'top'
+        }
+    },
+    data:[19,19,18,18,18,18,17,16,17,19,21,21,23,23,24,24,25,25,25],
+    lineStyle:{
+        color:"#999999",
+        width:4
+    },
+    itemStyle:{
+        borderColor:'#999999',
+        color:'#999999'
+    },
+    
+} 
+}
+    var option4 = {
+
+title:{
+    text:'CQ2',
+    left:'center',
+    textStyle:{
+        fontSize:35
+    }
+},
+grid:{
+    left:'5%',
+    top:'10%',
+    right:'5%',
+    bottom:'3%',
+    containLabel: true
+},
+xAxis :{
+    name:'时间',
+    boundaryGap: false,
+    data:['0','1','2','3',4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+    
+    axisLabel:{
+        rotate:-90,
+       
+    }
+
+},
+yAxis:{
+    type:'value',
+    axisLabel:{
+        formatter:'{value}°c'
+    }
+   
+},
+
+series:{
+    type:'line',
+    symbolSize:15,
+    symbol:'circle',
+    label: {
+        normal: {
+            show: true,
+            position: 'top'
+        }
+    },
+    data:[19,19,18,18,18,18,17,16,17,19,21,21,23,23,24,24,25,25,25],
+    lineStyle:{
+        color:"#999999",
+        width:4
+    },
+    itemStyle:{
+        borderColor:'#999999',
+        color:'#999999'
+    },
+    
+} 
+}
+    var option5 = {
+
+title:{
+    text:'光照',
+    left:'center',
+    textStyle:{
+        fontSize:35
+    }
+},
+grid:{
+    left:'5%',
+    top:'10%',
+    right:'5%',
+    bottom:'3%',
+    containLabel: true
+},
+xAxis :{
+    name:'时间',
+    boundaryGap: false,
+    data:['0','1','2','3',4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+   
+    axisLabel:{
+        rotate:-90,
+       
+    }
+
+},
+yAxis:{
+    type:'value',
+    axisLabel:{
+        formatter:'{value}°c'
+    }
+   
+},
+
+series:{
+    type:'line',
+    symbolSize:15,
+    symbol:'circle',
+    label: {
+        normal: {
+            show: true,
+            position: 'top'
+        }
+    },
+    data:[19,19,18,18,18,18,17,16,17,19,21,21,23,23,24,24,25,25,25],
+    lineStyle:{
+        color:"#999999",
+        width:4
+    },
+    itemStyle:{
+        borderColor:'#999999',
+        color:'#999999'
+    },
+    
+} 
+}    
+    var option6 = {
+
+title:{
+    text:'道路',
+    left:'center',
+    textStyle:{
+        fontSize:35
+    }
+},
+grid:{
+    left:'5%',
+    top:'10%',
+    right:'5%',
+    bottom:'3%',
+    containLabel: true
+},
+xAxis :{
+    name:'时间',
+    boundaryGap: false,
+    data:['0','1','2','3',4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+    
+    axisLabel:{
+        rotate:-90,
+       
+    }
+
+},
+yAxis:{
+    type:'value',
+    axisLabel:{
+        formatter:'{value}°c'
+    }
+   
+},
+
+series:{
+    type:'line',
+    symbolSize:15,
+    symbol:'circle',
+    label: {
+        normal: {
+            show: true,
+            position: 'top'
+        }
+    },
+    data:[19,19,18,18,18,18,17,16,17,19,21,21,23,23,24,24,25,25,25],
+    lineStyle:{
+        color:"#999999",
+        width:4
+    },
+    itemStyle:{
+        borderColor:'#999999',
+        color:'#999999'
+    },
+    
+} 
+}
+    
+  
+    myCharts0.setOption(option1,true);
+    myCharts1.setOption(option1,true);
+    myCharts2.setOption(option2,true);
+    myCharts3.setOption(option3,true);
+    myCharts4.setOption(option4,true);
+    myCharts5.setOption(option5,true);
+    myCharts6.setOption(option6,true);
+    myCharts7.setOption(option6,true);
+    setInterval(()=>{
+        option1.series.data.shift()
+        option1.series.data.push(parseInt(Math.random()*30))
+        option2.series.data.shift()
+        option2.series.data.push(parseInt(Math.random()*30))
+        option3.series.data.shift()
+        option3.series.data.push(parseInt(Math.random()*30))
+        option4.series.data.shift()
+        option4.series.data.push(parseInt(Math.random()*30))
+        option5.series.data.shift()
+        option5.series.data.push(parseInt(Math.random()*30))
+        option6.series.data.shift()
+        option6.series.data.push(parseInt(Math.random()*30))
+        myCharts0.setOption(option1,true);
+        myCharts1.setOption(option1,true);
+        myCharts2.setOption(option2,true);
+        myCharts3.setOption(option3,true);
+        myCharts4.setOption(option4,true);
+        myCharts5.setOption(option5,true);
+        myCharts6.setOption(option6,true);
+        myCharts7.setOption(option6,true);
+    },3000)
+    </script>
+</body>
+</html>     

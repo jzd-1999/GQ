@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/2.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../../Iconfont/iconfont.css">
+    <script src="../js/2.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <i class="iconfont icon-caidan"></i>
+        红绿灯管理
+    </header>
+    <div class="top">
+        <h2>红绿灯信息管理</h2>
+        <div class="topCenter">
+            排序：<select name="sort" id="select">
+                <option value="1">路口升序</option>
+                <option value="-1">路口降序</option>
+                <option value="2">红灯升序</option>
+                <option value="-2">红灯降序</option>
+                <option value="3">绿灯升序</option>
+                <option value="-3">绿灯降序</option>
+                <option value="4">黄灯升序</option>
+                <option value="-4">黄灯降序</option>
+
+            </select>
+            <button>查询</button>
+        </div>
+    </div>
+    <div class="table">
+        <table  cellspacing='0' cellpadding='0'>
+            <thead>
+                <tr>
+                    <td>路口</td>
+                    <td>红灯时长(S)</td>
+                    <td>黄灯时长(S)</td>
+                    <td>绿灯时长(S)</td>
+                </tr>
+            </thead>
+            <tbody  id='table'>
+                <tr>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

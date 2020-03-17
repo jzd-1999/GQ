@@ -1,0 +1,99 @@
+section{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 20px auto;
+}
+.top {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #666666;
+}
+.top div{
+    display: inline-block;
+}
+
+.msg{
+    float: right;
+    margin-right: 40%;
+}
+.center{
+    overflow: hidden;
+}
+.left,.right{
+    float: left;
+}
+.right{
+    margin-top: 30px;
+    width: 130px;
+    height: auto;
+    margin-left: 40%;
+}
+h2{
+    margin-top: 10px;
+}
+
+
+.item{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: pink;
+}
+.cricle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+.item span{
+    font-size: 28px;
+    font-weight: 600px;
+    margin:0px 20px;
+}
+.off{
+    position: absolute;
+    top:-10px;
+    right: 0;
+    background-color: rgb(245, 78, 133);
+}
+.no{
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    background-color: #666666;
+}
+.TrafficLight{
+    width: 130px;
+    height: 230px;
+    background-color: #666666;
+    border:1px solid #333333;
+    border-radius: 5px;
+    
+}
+.light{
+    margin: 5px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #333333;
+}
+.line{
+    width: 30px !important;
+    height: 130px;
+    margin: 0 auto;
+    background-color: #333333 !important;
+}

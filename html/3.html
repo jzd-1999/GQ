@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/3.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../../Iconfont/iconfont.css">
+    <script src="../js/3.js"></script>
+</head>
+<body>
+    <header>
+        <i class="iconfont icon-caidan"></i>
+        账单管理
+    </header>
+    <section>
+        <div class="top">
+            账单记录
+            <select name="" id="select">
+                <option value="1">时间升序</option>
+                <option value="1" selected='selected'>时间降序</option>
+            </select>
+            <button>查询</button>
+        </div>
+        <div class="table">
+            <table cellspacing='0' cellpadding='0'>
+                <thead>
+                    <tr>
+                        <td>序号</td>
+                        <td>车号</td>
+                        <td>充值金额（元）</td>
+                        <td>操作人</td>
+                        <td>充值时间</td>
+                    </tr>
+                </thead>
+                <tbody id='table'>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>admin</td>
+                        <td>2017.5.18 13:23</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>8</td>
+                        <td>admin</td>
+                        <td>2017.4.18 13:23</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>80</td>
+                        <td>admin</td>
+                        <td>2017.3.18 13:23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
